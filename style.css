@@ -1,0 +1,133 @@
+* {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  color: white;
+}
+
+body {
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+a,
+input,
+button,
+select,
+optgroup,
+textarea {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.btn {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: white;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  height: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+
+header {
+  margin-top: 1.5rem;
+}
+
+header .row.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .row.contacts a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  margin-right: 4.25rem;
+}
+
+header .row.contacts a img {
+  margin-right: 1.25rem;
+}
+
+header .row.contacts a label {
+  font-size: 1.25rem;
+}
+
+header .row.contacts .share {
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .row.contacts .share img {
+  margin-right: 2rem;
+}
+
+header .row.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+header .row.nav nav {
+  margin-top: -0.5rem;
+}
+
+header .row.nav nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .row.nav nav ul li {
+  margin-left: 2.5rem;
+}
+
+header .row.nav nav ul li a {
+  font-size: 18px;
+  font-weight: 900;
+}
+/*# sourceMappingURL=style.css.map */
