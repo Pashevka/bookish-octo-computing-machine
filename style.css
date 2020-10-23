@@ -1,37 +1,111 @@
 * {
-  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 0;
 }
 
 html {
   font-size: 16px;
 }
 
-a {
-  color: white;
-}
-
-body {
-  background-color: black;
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.content {
-  max-width: 1160px;
-  margin: 0 auto;
+.container {
+  max-width: 1190px;
 }
 
 a,
-input,
-button,
-select,
-optgroup,
-textarea {
-  font-family: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
+.fz-1 {
+  font-size: 1rem;
+}
+
+.fz-1_125 {
+  font-size: 1.125rem;
+}
+
+.fz-1_25 {
+  font-size: 1.25rem;
+}
+
+.fz-1_5 {
+  font-size: 1.5rem;
+}
+
+.fz-1_75 {
+  font-size: 1.75rem;
+}
+
+.fz-2 {
+  font-size: 2rem;
+}
+
+.fz-0_25 {
+  font-size: 0.25rem;
+}
+
+.fz-0_5 {
+  font-size: 0.5rem;
+}
+
+.fz-0_75 {
+  font-size: 0.75rem;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
   font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+body {
+  overflow: overlay;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 .btn {
@@ -44,90 +118,84 @@ textarea {
   padding-left: 1em;
   padding-right: 1em;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-weight: 600;
+  border-radius: 0;
 }
 
-header {
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+main {
   margin-top: 1.5rem;
 }
 
-header .row.contacts {
+main .main {
+  position: relative;
+  height: calc(100vh - 150px - 1.5rem);
+}
+
+main .main__title {
+  position: absolute;
+  top: 5rem;
+  z-index: 1;
+}
+
+main .main__title--colored {
+  margin-top: 0.5rem;
+  background-color: #89e1f3;
+  padding: 0.25rem;
+  margin-left: -0.25rem;
+}
+
+main .main__title--colored label {
+  color: black;
+}
+
+main .main__title button {
+  margin-top: 8.75rem;
+  padding: 1.75rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  font-size: 16px;
+}
+
+main .main__video {
+  position: absolute;
+  width: 660px;
+  right: 0;
+  top: 0;
+}
+
+main .main__video iframe {
+  height: 460px;
+  width: 100%;
+}
+
+main .main__video .main__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .row.contacts a {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  margin-right: 4.25rem;
-}
-
-header .row.contacts a img {
-  margin-right: 1.25rem;
-}
-
-header .row.contacts a label {
+  margin-top: 3rem;
   font-size: 1.25rem;
-}
-
-header .row.contacts .share {
-  margin-top: 0.625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-header .row.contacts .share img {
-  margin-right: 2rem;
-}
-
-header .row.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2rem;
-}
-
-header .row.nav nav {
-  margin-top: -0.5rem;
-}
-
-header .row.nav nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .row.nav nav ul li {
-  margin-left: 2.5rem;
-}
-
-header .row.nav nav ul li a {
-  font-size: 18px;
-  font-weight: 900;
+  font-weight: 600;
+  line-height: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
