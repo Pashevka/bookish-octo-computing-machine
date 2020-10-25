@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="slick.css" />
+  <link rel="stylesheet" href="slick-theme.css" />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="global.css" />
   <link rel="stylesheet" href="style.css" />
   <title>Document</title>
 </head>
@@ -37,18 +38,16 @@
     </div>
 
 
-
-    <nav class="navbar navbar-expand-lg mt-3">
+    <nav class="navbar navbar-expand-lg mt-2 p0">
       <div class="container">
-        <a class="navbar-brand" href="#"><img class="logo" src="./assets/logo.svg"></img></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#kata-navbar"
-          aria-controls="kata-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#"><img class="logo" src="./assets/logo.svg"></img>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#kata-navbar" aria-controls="kata-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="kata-navbar">
           <ul class="navbar-nav ml-auto fz-1_125">
-            <li class="nav-item  dropdown"><a class="fw-800 nav-link dropdown-toggle" id="navbarDropdown"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href='#'>Программы</a>
+            <li class="nav-item  dropdown"><a class="fw-800 nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href='#'>Программы</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -65,49 +64,364 @@
           </ul>
         </div>
       </div>
-
     </nav>
-    <!-- <nav>
-      <img class="logo" src="./assets/logo.svg"></img>
-      <ul>
-        <li><a href='#'>Программы</a></li>
-        <li><a href='#'>Выпускники</a></li>
-        <li><a href='#'>Community</a></li>
-        <li><a href='#'>Life</a></li>
-        <li><a href='#'>Об Академии</a></li>
-        <li><a href='#'>Контакты</a></li>
-      </ul>
-    </nav> -->
   </header>
   <main>
     <section class='main'>
       <div class="container">
-        <div class="main__title">
-          <h1>Твоё время <div class="main__title--colored"><label>стать разработчиком</label></div>
-          </h1>
-          <button class="btn btn-primary">Поступить в Ката</button>
-        </div>
-        <div class="main__video">
-          <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html"
-            src="https://www.youtube.com/embed/xK74V2MWhSg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
-          <div class="main__description">
-            <label>KATA инвестирует в твоё будущее, чтобы ты мог стать востребованным java или web
+        <div class="row">
+          <div class="main__title">
+            <h1>Твоё время <br /><label class="main__title--colored fw-700 bg-blue">стать разработчиком</label>
+            </h1>
+            <button class="btn">Поступить в Ката</button>
+          </div>
+          <div class="main__video ml-auto">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/xK74V2MWhSg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
+            <div class="main__description">
+              <label class="circe fz-1_5 color-light-gray">KATA инвестирует в твоё будущее, чтобы ты мог стать востребованным java или web
               разработчиком</label>
-            <img src="./assets/tape.svg" alt="tape">
+              <img width="75" src="./assets/tape.svg" alt="tape">
+            </div>
           </div>
         </div>
       </div>
 
     </section>
-  </main>
-  <footer></footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+    <section class="plan">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 fw-700 d-flex align-items-center">
+            <h2>
+              <div class='d-inline bg-blue'>Мы с тобой</div> от заявки <br /> и до первого рабочего дня <br /> <br /> У нас одна цель — <br /> твоё трудоустройство в IT
+            </h2>
+          </div>
+          <div class="col-md-5 fw-700">
+            <div class="plan-steps bg-blue circe fz-1_5">
+              <div class="plan-steps__row">
+                <img class='mans-icon' src="./assets/two_mans.svg" alt="mans icon">
+                <label>Интенсивная подготовка с ментором</label>
+              </div>
+              <div class="plan-steps__row">
+                <img src="./assets/paper.svg" alt="paper">
+                <label>Опыт в коммерческом проекте</label>
+              </div>
+              <div class="plan-steps__row">
+                <img src="./assets/hand.svg" alt="hand">
+                <label>Поддержка сообщества</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cup">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 cup__wrapper">
+            <img src="./assets/cup.svg" alt="cup">
+            <h2>Гарантия трудоустройства или обучение за наш счет</h2>
+            <button class="btn">Истории выпускников</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="program">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="mr-4"> В KATA ты можешь <label class="bg-blue">сначала учиться</label> ,<br /> а <label class="bg-blue">платить после</label> трудоустройства</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="description">Освой востребованную специальность и плати только за результат, когда устроишься на работу</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="kata-card circe">
+              <div class="kata-card__header fz-1_5">Оплата после трудоустройства</div>
+              <div class="kata-card__content">
+                <div class="kata-card__title">
+                  <div class="kata-card__name montserrat">JAVA DEVELOPER</div>
+                  <img src="./assets/java_card.svg" alt="java card" class="kata-card__icon" />
+                </div>
+                <div class="kata-card__skills">
+                  <div class="kata-card__skills-title">
+                    Ты освоишь
+                  </div>
+                  <div class="kata-card__skills-data">
+                    #Java Core #Spring MVC #Spring Core #Spring Security #Spring Boot 2.x #Hibernate #Maven #Git #Junit #Tomcat #IDEA
+                  </div>
+                  <div class="kata-card__skills-period">
+                    Срок обучения: ≈ 7 месяцев
+                  </div>
+                </div>
+                <button class="btn btn-black">подробнее</button>
+              </div>
 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="kata-card circe">
+              <div class="kata-card__header fz-1_5">Оплата после трудоустройства</div>
+              <div class="kata-card__content">
+                <div class="kata-card__title">
+                  <div class="kata-card__name montserrat kata-card__name--light">Front-End Developer</div>
+                  <img src="./assets/js_card.svg" alt="java card" class="kata-card__icon" />
+                </div>
+                <div class="kata-card__skills">
+                  <div class="kata-card__skills-title">
+                    Ты освоишь
+                  </div>
+                  <div class="kata-card__skills-data">
+                    #HTML #CSS #JavaScript #React+Redux#Git #WebStorm
+                  </div>
+                  <div class="kata-card__skills-period">
+                    Срок обучения: ≈ 7 месяцев
+                  </div>
+                </div>
+                <button class="btn btn-black">подробнее</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mentor">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2> А ещё ты можешь начать online подготовку с ментором с любого уровня и платить ежемесячно</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="description dark"> Мы подготовим тебя к трудоустройству в IT даже, если у тебя нет базовых знаний в программировании</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="kata-card dark circe">
+              <div class="kata-card__header fz-1_5">Оплата во время учёбы</div>
+              <div class="kata-card__content">
+                <div class="kata-card__title">
+                  <div class="kata-card__name montserrat">Java developer</div>
+                  <img src="./assets/java_card.svg" alt="java card" class="kata-card__icon" />
+                </div>
+                <div class="kata-card__skills">
+                  <div class="kata-card__skills-period">
+                    Срок обучения: от 11 месяцев
+                  </div>
+                </div>
+                <button class="btn btn-black">подробнее</button>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="kata-card dark circe">
+              <div class="kata-card__header fz-1_5">Оплата во время учёбы</div>
+              <div class="kata-card__content">
+                <div class="kata-card__title">
+                  <div class="kata-card__name montserrat kata-card__name--light">Front-End Developer</div>
+                  <img src="./assets/js_card.svg" alt="java card" class="kata-card__icon" />
+                </div>
+                <div class="kata-card__skills">
+                  <div class="kata-card__skills-period">
+                    Срок обучения: от 11 месяцев
+                  </div>
+                </div>
+                <button class="btn btn-black">подробнее</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bootcamp">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h2 class="bootcamp-header">JAVAbootcamp</h2>
+            <div class="bootcamp-description circe">Это единственный в России offline интенсив для тех, кто хочет совершить старт или рывок в развитии на Java
+            </div>
+            <button class="btn fz-1_5">Подробнее</button>
+          </div>
+          <div class="col-md-5">
+            <div class="kata-slider">
+              <img src="./assets/slider-photos/slider_1.jpg" alt="slider 1">
+              <img src="./assets/slider-photos/bootcamp.jpg" alt="slider 1">
+              <img src="./assets/slider-photos/german.jpg" alt="slider 1">
+              <img src="./assets/slider-photos/asya.jpg" alt="slider 1">
+              <img src="./assets/slider-photos/guys.jpg" alt="slider 1">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="access">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>У нас совсем <label class="bg-blue">другой подход</label> к online-подготовке </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="description">В KATA мы объединили все, что поможет тебе стать самостоятельными бойцом и востребованным специалистом за короткий срок</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="access-card">
+              <img src="./assets/access-cards/access-card-1.svg" alt="access-card-1">
+              <div class="access-card__title">Регулярное взаимодействие студентов и ментора</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="access-card">
+              <img src="./assets/access-cards/access-card-2.svg" alt="access-card-2">
+              <div class="access-card__title">Контроль знаний <br /> на каждом этапе</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="access-card">
+              <img src="./assets/access-cards/access-card-3.svg" alt="access-card-3">
+              <div class="access-card__title">Востребованный стек технологий</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="access-card">
+              <img src="./assets/access-cards/access-card-4.svg" alt="access-card-4">
+              <div class="access-card__title">Стажировка <br /> в бизнес-проекте </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="access-card">
+              <img src="./assets/access-cards/access-card-5.svg" alt="access-card-5">
+              <div class="access-card__title">Сообщество студентов <br /> и выпускников</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="access-card">
+              <img src="./assets/access-cards/access-card-6.svg" alt="access-card-6">
+              <div class="access-card__title">Подготовка к собеседованиям и трудоустройству</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='stories'>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Разрушители мифов</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="description">Каждый из этих ребят смог реализовать мечту. Мы верим, что сможешь и ты!</p>
+          </div>
+        </div>
+        <div class="row stories-content">
+          <div class="col-md-6">
+            <div class="stories-list">
+              <div class="stories-list__item">
+                <img src="./assets/stories/icons/story-icon-1.svg" alt="story-icon-1">
+                <a class="stories-list__item-link" href='#'>Если нет диплома <br /> о высшем образовании</a>
+              </div>
+              <div class="stories-list__item">
+                <img src="./assets/stories/icons/story-icon-2.svg" alt="story-icon-2">
+                <a class="stories-list__item-link" href='#'>Мне больше 40 лет</a>
+              </div>
+              <div class="stories-list__item">
+                <img src="./assets/stories/icons/story-icon-3.svg" alt="story-icon-3">
+                <a class="stories-list__item-link" href='#'>У меня нет бэкграунда <br /> в программировании</a>
+              </div>
+              <div class="stories-list__item custom-margin">
+                <img src="./assets/stories/icons/story-icon-4.svg" alt="story-icon-4">
+                <a class="stories-list__item-link" href='#'>Программирование <br /> не для девушек</a>
+              </div>
+            </div>
+            <button class="btn">Смотреть все</button>
+          </div>
+          <div class="col-md-6">
+            <div class="stories-example">
+              <img src="./assets/stories/story_1.png" alt="story 1" class="stories-example__background">
+              <img src="./assets/stories/story_2.png" alt="story 2" class="stories-example__other-1">
+              <img src="./assets/stories/story_3.png" alt="story 3" class="stories-example__other-2">
+              <img src="./assets/stories/story_4.png" alt="story 4" class="stories-example__other-3">
+              <div class="stories-example__content">
+                <div class="stories-example__header">У меня нет бэкграунда <br /> в программировании</div>
+                <div class="stories-example__title circe">Каждый студент получает реальный опыт разработки коммерческого проекта в команде перед трудоустройством. Это возможность проверить полученные навыки и начать настоящее решение боевых задач. </div>
+                <div class="stories-example__name circe">— Виталина Чайникова</div>
+                <a href="#" class="stories-example__link">
+                  Читать <br /> историю <div class="stories-example__triangle" ></div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="work">
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-12">
+            <h2>Где работают наши выпускники</h2>
+          </div>
+        </div>
+        <div class="row work__container">
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/vtb.png" alt="vtb"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/sm.png" alt="sm"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/hcb.png" alt="hcb"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/twino.png" alt="twino"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/epam.png" alt="epam"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/oleg.png" alt="oleg"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/cmx.png" alt="cmx"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/sb.png" alt="sb"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/itc.png" alt="itc"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/lxf.png" alt="lxf"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/rfb.png" alt="rfb"></div>
+          </div>
+          <div class="col-md-2">
+            <div class="img-wrapper"><img src="./assets/logos/nmn.png" alt="nmn"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./slick.min.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>

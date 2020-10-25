@@ -1,0 +1,200 @@
+.fz-1 {
+    font-size: 1rem;
+}
+
+.fz-1_125 {
+    font-size: 1.125rem;
+}
+
+.fz-1_25 {
+    font-size: 1.25rem;
+}
+
+.fz-1_5 {
+    font-size: 1.5rem;
+}
+
+.fz-1_75 {
+    font-size: 1.75rem;
+}
+
+.fz-2 {
+    font-size: 2rem;
+}
+
+.fz-0_25 {
+    font-size: 0.25rem;
+}
+
+.fz-0_5 {
+    font-size: 0.5rem;
+}
+
+.fz-0_75 {
+    font-size: 0.75rem;
+}
+
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.circe {
+    font-family: "Circe", sans-serif;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.bg-blue {
+    background-color: #89e1f3;
+    color: black;
+}
+
+.color-light-gray {
+    color: #d2d3d8
+}
+
+html {
+    font-size: 16px;
+    overflow: overlay;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1190px;
+    }
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+}
+
+a:hover {
+    color: inherit;
+}
+
+section .description {
+    font-family: "Circe";
+    font-weight: 700;
+    font-size: 24px;
+    color: #D2D3D8;
+    margin-top: 40px;
+}
+
+section .description.dark {
+    line-height: 35px;
+    margin-top: 50px;
+    color: black;
+}
+
+.btn {
+    font-family: 'Montserrat'!important;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: white;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    padding: 1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.1s;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+.btn-black {
+    border: 3px solid black;
+    color: black;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-black:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+body {
+    overflow: overlay;
+    background-color: black;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    padding-bottom: 100vh;
+}
