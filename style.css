@@ -491,4 +491,22 @@ main .work__container .img-wrapper {
           align-items: center;
   margin-bottom: 32px;
 }
+
+main .community {
+  margin-top: 120px;
+}
+
+main .community-content .community-card {
+  margin-top: 54px;
+}
+
+main .community-content .community-card img {
+  width: 100%;
+}
+
+main .community-content .community-card__title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */
