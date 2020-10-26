@@ -78,13 +78,38 @@ nav {
     }
 }
 
+.arrow-btn {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translate(-27px, -28px);
+    line-height: 20px;
+    cursor: pointer;
+    &.dark {
+        color: black;
+    }
+    &::after {
+        content: '';
+        left: 77%;
+        top: -80%;
+        z-index: -1;
+        position: absolute;
+        border-top: 51px solid transparent;
+        border-bottom: 51px solid transparent;
+        border-left: 87px solid #8C9EFB;
+    }
+}
+
 main {
     margin-top: 1.5rem;
     .main {
         position: relative;
         &__title {
             position: absolute;
-            top: 7rem;
+            top: 8rem;
             z-index: 1;
             padding-left: 15px;
             h1 {
@@ -119,7 +144,7 @@ main {
         }
     }
     .plan {
-        margin-top: 130px;
+        margin-top: 140px;
         .plan-steps {
             padding: 28px 34px 22px 32px;
             display: grid;
@@ -229,7 +254,7 @@ main {
         }
     }
     .stories {
-        margin-top: 75px;
+        margin-top: 70px;
         .description {
             margin-top: 50px;
         }
@@ -335,10 +360,7 @@ main {
                 .stories-example__link {
                     position: absolute;
                     bottom: 65px;
-                    color: black;
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 20px;
+                    left: 100px;
                     .stories-example__triangle {
                         margin-top: -70px;
                         margin-left: 53px;
@@ -388,6 +410,7 @@ main {
         &-content {
             .community-card {
                 margin-top: 54px;
+                cursor: pointer;
                 img {
                     width: 100%;
                 }
@@ -396,6 +419,50 @@ main {
                     font-size: 20px;
                     font-weight: 700;
                 }
+            }
+        }
+    }
+    .engage {
+        margin-top: 65px;
+        font-size: 24px;
+        font-weight: 700;
+        h2 {
+            color: #8C9EFB;
+        }
+        button {
+            font-size: 16px;
+        }
+        &__content {
+            margin-top: 70px;
+            button {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+        }
+        img {
+            width: 26px;
+        }
+    }
+}
+
+footer {
+    margin-top: 75px;
+    .container {
+        nav {
+            border-top: 3px solid #161B1C;
+            padding: 0;
+            padding-top: 50px;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .meta {
+            margin-top: 88px;
+            font-size: 16px;
+            font-weight: 700;
+            .link {
+                margin-right: 47px;
             }
         }
     }

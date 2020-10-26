@@ -87,6 +87,34 @@ nav {
   padding-right: 60px;
 }
 
+.arrow-btn {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transform: translate(-27px, -28px);
+          transform: translate(-27px, -28px);
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.arrow-btn.dark {
+  color: black;
+}
+
+.arrow-btn::after {
+  content: '';
+  left: 77%;
+  top: -80%;
+  z-index: -1;
+  position: absolute;
+  border-top: 51px solid transparent;
+  border-bottom: 51px solid transparent;
+  border-left: 87px solid #8C9EFB;
+}
+
 main {
   margin-top: 1.5rem;
 }
@@ -97,7 +125,7 @@ main .main {
 
 main .main__title {
   position: absolute;
-  top: 7rem;
+  top: 8rem;
   z-index: 1;
   padding-left: 15px;
 }
@@ -140,7 +168,7 @@ main .main__video .main__description {
 }
 
 main .plan {
-  margin-top: 130px;
+  margin-top: 140px;
 }
 
 main .plan .plan-steps {
@@ -288,7 +316,7 @@ main .access-card__title {
 }
 
 main .stories {
-  margin-top: 75px;
+  margin-top: 70px;
 }
 
 main .stories .description {
@@ -434,10 +462,7 @@ main .stories .stories-example__content .stories-example__name {
 main .stories .stories-example__content .stories-example__link {
   position: absolute;
   bottom: 65px;
-  color: black;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 20px;
+  left: 100px;
 }
 
 main .stories .stories-example__content .stories-example__link .stories-example__triangle {
@@ -498,6 +523,7 @@ main .community {
 
 main .community-content .community-card {
   margin-top: 54px;
+  cursor: pointer;
 }
 
 main .community-content .community-card img {
@@ -508,5 +534,57 @@ main .community-content .community-card__title {
   margin-top: 20px;
   font-size: 20px;
   font-weight: 700;
+}
+
+main .engage {
+  margin-top: 65px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main .engage h2 {
+  color: #8C9EFB;
+}
+
+main .engage button {
+  font-size: 16px;
+}
+
+main .engage__content {
+  margin-top: 70px;
+}
+
+main .engage__content button {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+main .engage img {
+  width: 26px;
+}
+
+footer {
+  margin-top: 75px;
+}
+
+footer .container nav {
+  border-top: 3px solid #161B1C;
+  padding: 0;
+  padding-top: 50px;
+}
+
+footer .container .navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+footer .container .meta {
+  margin-top: 88px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer .container .meta .link {
+  margin-right: 47px;
 }
 /*# sourceMappingURL=style.css.map */
