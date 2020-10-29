@@ -15,48 +15,81 @@
   <title>Document</title>
 </head>
 
-<body>
-  <header class='mt-3'>
+<body style='opacity: 0;'>
+  <header>
     <div class="container">
       <div class="row align-items-center">
-        <div class="share col-xl-3">
-          <a class='mr-4' href='https://www.facebook.com/rujavamentor'><img src="./assets/fb.svg" alt="fb share" /></a>
-          <a class='mr-4' href='https://vk.com/java_mentor'><img src="./assets/vk.svg" alt="vk share" /></a>
-          <a class='mr-4' href='https://www.instagram.com/javamentor'><img src="./assets/inst.svg" alt="inst share" /></a>
-          <a class='mr-4' href='https://t.me/JavaMentor'><img src="./assets/tg.svg" alt="tg share" /></a>
+        <div class="col-12 col-md-3 col-xl-2 share d-flex justify-content-between align-items-center">
+          <a class="d-inline d-sm-none" href="#">
+            <img class="logo small-logo" src="./assets/pure_logo.svg" alt="pure_logo" />
+          </a>
+          <a href='https://www.facebook.com/rujavamentor'><img src="./assets/fb.svg" alt="fb share" /></a>
+          <a href='https://vk.com/java_mentor'><img src="./assets/vk.svg" alt="vk share" /></a>
+          <a href='https://www.instagram.com/javamentor'><img src="./assets/inst.svg" alt="inst share" /></a>
+          <a href='https://t.me/JavaMentor'><img src="./assets/tg.svg" alt="tg share" /></a>
+          <div class="d-flex d-md-none justify-content-end"><button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#kata-navbar" aria-controls="kata-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./assets/nav-bar-toggler.svg" alt="toggler">
+          </button></div>
         </div>
-        <div class="active-btns col-5 col-xl-5 offset-4 d-flex justify-content-between">
+        <div class="col-md-8 col-xl-9 active-btns  ml-auto justify-content-end d-none d-md-flex">
           <a class='phone d-flex align-items-center' href="tel:+7(800)350-32-96">
             <img class='mr-3' src="./assets/phone.svg" alt="phone" />
             <label class='fz-1_25 fw-600'>8 800 350 32 96</label>
           </a>
-          <div class="btn-wrapper d-flex justify-content-end">
+          <div class="btn-wrapper d-none d-lg-block ml-5">
             <button class="btn">Поступить в KATA</button>
           </div>
         </div>
+        <div class="col-1 d-none d-md-flex d-lg-none justify-content-end"><button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#kata-navbar" aria-controls="kata-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./assets/nav-bar-toggler.svg" alt="toggler">
+          </button></div>
       </div>
       <div class="row mt-3">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-lg mt-2 p-0">
-            <a class="navbar-brand" href="#"><img class="logo" src="./assets/logo.svg"></img>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#kata-navbar" aria-controls="kata-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+            <div class="main-info w-100 d-flex justify-content-between align-items-center">
+
+              <a class="navbar-brand d-none d-sm-inline " href="#">
+                <img class="logo" src="./assets/logo.svg" alt="pure_logo" />
+              </a>
+              <h1 class="d-inline d-lg-none">Твоё время <label class="main__title--colored fw-700 bg-blue">стать разработчиком</label>
+              </h1>
+            </div>
+
             <div class="collapse navbar-collapse" id="kata-navbar">
               <ul class="navbar-nav ml-auto fz-1_125">
-                <li class="nav-item  dropdown"><a class="fw-800 nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href='#'>Программы</a>
+                <li class="nav-item  dropdown ml-4">
+                  <a class="fw-800 nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href='#'>Программы</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu__content">
+                      <div class="dropdown-col">
+                        <div class="dropdown-item">
+                          <div class="dropdown-item__title">Java developer</div>
+                          <div class="dropdown-item__description circe">Оплата после трудоустройства</div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="dropdown-item__title">Front-end developer</div>
+                          <div class="dropdown-item__description circe">Оплата после трудоустройства</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-col dropdown-col--border">
+                        <div class="dropdown-item">
+                          <div class="dropdown-item__title">Java developer</div>
+                          <div class="dropdown-item__description circe">Оплата во время учёбы</div>
+                        </div>
+                        <div class="dropdown-item">
+                          <div class="dropdown-item__title">Front-end developer</div>
+                          <div class="dropdown-item__description circe">Оплата во время учёбы</div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </li>
 
                 <li class="nav-item ml-4 "><a class="fw-800 nav-link" href='#'>Выпускники</a></li>
-                <li class="nav-item ml-4 "><a class="fw-800 nav-link" href='#'>Community</a></li>
-                <li class="nav-item ml-4 "><a class="fw-800 nav-link" href='#'>Life</a></li>
+                <li class="nav-item ml-4 d-block d-lg-none d-xl-block"><a class="fw-800 nav-link" href='#'>Community</a></li>
+                <li class="nav-item ml-4 d-block d-lg-none d-xl-block"><a class="fw-800 nav-link" href='#'>Life</a></li>
                 <li class="nav-item ml-4 "><a class="fw-800 nav-link" href='#'>Об Академии</a></li>
                 <li class="nav-item ml-4 "><a class="fw-800 nav-link" href='#'>Контакты</a></li>
               </ul>
@@ -70,19 +103,20 @@
   <main>
     <section class='main'>
       <div class="container">
-        <div class="row">
+        <div class="justify-content-start justify-content-xl-between ">
           <div class="main__title">
-            <h1>Твоё время <br /><label class="main__title--colored fw-700 bg-blue">стать разработчиком</label>
+            <h1 class="d-none d-lg-block">Твоё время <br class="d-block d-sm-none d-md-none  d-xl-block" /><label class="main__title--colored fw-700 bg-blue">стать разработчиком</label>
             </h1>
-            <button class="btn">Поступить в Kata</button>
+            <button class="btn d-none d-xl-block">Поступить в Kata</button>
           </div>
           <div class="main__video ml-auto">
             <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/xK74V2MWhSg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
             <div class="main__description">
-              <label class="circe fz-1_5 color-light-gray">KATA инвестирует в твоё будущее, чтобы ты мог стать востребованным java или web
+              <label class="circe color-light-gray">KATA инвестирует в твоё будущее, чтобы ты мог стать востребованным JAVA или WEB
               разработчиком</label>
               <img width="75" src="./assets/tape.svg" alt="tape">
             </div>
+            <button class="btn d-block d-xl-none w-100 mt-4">Поступить в Kata</button>
           </div>
         </div>
       </div>
@@ -91,13 +125,14 @@
     <section class="plan">
       <div class="container">
         <div class="row">
-          <div class="col-md-7 fw-700 d-flex align-items-center">
+          <div class="col-12 col-md-6 col-lg-7 fw-700 d-flex align-items-center">
             <h2>
-              <div class='d-inline bg-blue'>Мы с тобой</div> от заявки <br /> и до первого рабочего дня <br /> <br /> У нас одна цель — <br /> твоё трудоустройство в IT
+              <div class='d-inline bg-blue'>Мы с тобой</div> от заявки <br /> и до первого рабочего дня <br class="d-none d-md-inline" /> <br class="d-none d-md-inline" />
+              <label class="d-none d-md-inline"> У нас одна цель — <br /> твоё трудоустройство в IT</label>
             </h2>
           </div>
-          <div class="col-md-5 fw-700">
-            <div class="plan-steps bg-blue circe fz-1_5">
+          <div class="col-12 col-md-6 col-lg-5 fw-700">
+            <div class="plan-steps bg-blue circe">
               <div class="plan-steps__row">
                 <img class='mans-icon' src="./assets/two_mans.svg" alt="mans icon">
                 <label>Интенсивная подготовка с ментором</label>
@@ -112,6 +147,7 @@
               </div>
             </div>
           </div>
+          <div class="col-12 plan__description circe d-inline d-md-none">У нас одна цель — твоё трудоустройство в IT</div>
         </div>
       </div>
     </section>
@@ -130,7 +166,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="mr-4"> В KATA ты можешь <label class="bg-blue">сначала учиться</label> ,<br /> а <label class="bg-blue">платить после</label> трудоустройства</h2>
+            <h2 class="mr-4"> В KATA ты можешь <label class="bg-blue">сначала </label><label class="bg-blue ml-m-2">учиться</label>,<br class="d-none d-lg-block" /> а <label class="bg-blue">платить после</label> трудоустройства</h2>
           </div>
         </div>
         <div class="row">
@@ -138,10 +174,10 @@
             <p class="description">Освой востребованную специальность и плати только за результат, когда устроишься на работу</p>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-md-6">
+        <div class="row program__cards">
+          <div class="col-12 col-md-6">
             <div class="kata-card circe">
-              <div class="kata-card__header fz-1_5">Оплата после трудоустройства</div>
+              <div class="kata-card__header">Оплата после трудоустройства</div>
               <div class="kata-card__content">
                 <div class="kata-card__title">
                   <div class="kata-card__name montserrat">JAVA DEVELOPER</div>
@@ -163,7 +199,7 @@
 
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-12 col-md-6">
             <div class="kata-card circe">
               <div class="kata-card__header fz-1_5">Оплата после трудоустройства</div>
               <div class="kata-card__content">
@@ -202,7 +238,7 @@
             <p class="description dark"> Мы подготовим тебя к трудоустройству в IT даже, если у тебя нет базовых знаний в программировании</p>
           </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mentor__cards">
           <div class="col-md-6">
             <div class="kata-card dark circe">
               <div class="kata-card__header fz-1_5">Оплата во время учёбы</div>
@@ -245,20 +281,33 @@
     <section class="bootcamp">
       <div class="container">
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-12 col-lg-6 col-xl-7">
             <h2 class="bootcamp-header">JAVAbootcamp</h2>
-            <div class="bootcamp-description circe">Это единственный в России offline интенсив для тех, кто хочет совершить старт или рывок в развитии на Java
+            <div class="bootcamp-description description circe">Это единственный в России offline интенсив для тех, кто хочет совершить старт или рывок в развитии на Java
             </div>
-            <button class="btn fz-1_5">Подробнее</button>
+            <button class="d-none d-lg-block btn fz-1_5">Подробнее</button>
           </div>
-          <div class="col-md-5">
+          <div class="col-12 col-lg-6 col-xl-5 kata-slider__container">
             <div class="kata-slider">
-              <img src="./assets/slider-photos/slider_1.jpg" alt="slider 1">
-              <img src="./assets/slider-photos/bootcamp.jpg" alt="slider 1">
-              <img src="./assets/slider-photos/german.jpg" alt="slider 1">
-              <img src="./assets/slider-photos/asya.jpg" alt="slider 1">
-              <img src="./assets/slider-photos/guys.jpg" alt="slider 1">
+              <img src="./assets/slider-photos/4.jpg" alt="slider 4">
+              <img src="./assets/slider-photos/1.jpg" alt="slider 1">
+              <img src="./assets/slider-photos/2.jpg" alt="slider 2">
+              <img src="./assets/slider-photos/3.jpg" alt="slider 3">
+              <img src="./assets/slider-photos/5.jpg" alt="slider 5">
+              <img src="./assets/slider-photos/6.jpg" alt="slider 6">
+              <img src="./assets/slider-photos/7.jpg" alt="slider 7">
+              <img src="./assets/slider-photos/8.jpg" alt="slider 8">
+              <img src="./assets/slider-photos/9.jpg" alt="slider 9">
+              <img src="./assets/slider-photos/10.jpg" alt="slider 10">
+              <img src="./assets/slider-photos/11.jpg" alt="slider 11">
+              <img src="./assets/slider-photos/12.jpg" alt="slider 12">
+              <img src="./assets/slider-photos/13.jpg" alt="slider 13">
             </div>
+          </div>
+        </div>
+        <div class="row d-block d-lg-none mt-4">
+          <div class="col-12">
+            <button class="btn fz-1_5 w-100">Подробнее</button>
           </div>
         </div>
       </div>
@@ -275,44 +324,84 @@
             <p class="description">В KATA мы объединили все, что поможет тебе стать самостоятельными бойцом и востребованным специалистом за короткий срок</p>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-md-4">
+        <div class="row access__container">
+          <div class="col-12 kata-slider-access d-block d-sm-none">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="access-card">
+                <img src="./assets/access-cards/access-card-1.svg" alt="access-card-1">
+                <div class="access-card__title">Регулярное взаимодействие студентов и ментора</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="access-card">
+                <img src="./assets/access-cards/access-card-2.svg" alt="access-card-2">
+                <div class="access-card__title">Контроль знаний <br /> на каждом этапе</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="access-card">
+                <img src="./assets/access-cards/access-card-3.svg" alt="access-card-3">
+                <div class="access-card__title">Востребованный стек технологий</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="access-card">
+                <img src="./assets/access-cards/access-card-4.svg" alt="access-card-4">
+                <div class="access-card__title">Стажировка <br /> в бизнес-проекте </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="access-card">
+                <img src="./assets/access-cards/access-card-5.svg" alt="access-card-5">
+                <div class="access-card__title">Сообщество студентов <br /> и выпускников</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="access-card">
+                <img src="./assets/access-cards/access-card-6.svg" alt="access-card-6">
+                <div class="access-card__title">Подготовка к собеседованиям и трудоустройству</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-sm-flex col-12 col-sm-6 col-md-4">
             <div class="access-card">
               <img src="./assets/access-cards/access-card-1.svg" alt="access-card-1">
               <div class="access-card__title">Регулярное взаимодействие студентов и ментора</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-none d-sm-flex col-12 col-sm-6 col-md-4">
             <div class="access-card">
               <img src="./assets/access-cards/access-card-2.svg" alt="access-card-2">
               <div class="access-card__title">Контроль знаний <br /> на каждом этапе</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-none d-sm-flex col-12 col-sm-6 col-md-4">
             <div class="access-card">
               <img src="./assets/access-cards/access-card-3.svg" alt="access-card-3">
               <div class="access-card__title">Востребованный стек технологий</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-none d-sm-flex col-12 col-sm-6 col-md-4">
             <div class="access-card">
               <img src="./assets/access-cards/access-card-4.svg" alt="access-card-4">
               <div class="access-card__title">Стажировка <br /> в бизнес-проекте </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-none d-sm-flex col-12 col-sm-6 col-md-4">
             <div class="access-card">
               <img src="./assets/access-cards/access-card-5.svg" alt="access-card-5">
               <div class="access-card__title">Сообщество студентов <br /> и выпускников</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-none d-sm-flex col-12 col-sm-6 col-md-4">
             <div class="access-card">
               <img src="./assets/access-cards/access-card-6.svg" alt="access-card-6">
               <div class="access-card__title">Подготовка к собеседованиям и трудоустройству</div>
             </div>
           </div>
         </div>
+
+      </div>
       </div>
     </section>
     <section class='stories'>
@@ -328,11 +417,11 @@
           </div>
         </div>
         <div class="row stories-content">
-          <div class="col-md-6">
+          <div class="col-12 col-md-6">
             <div class="stories-list">
               <div class="stories-list__item">
                 <img src="./assets/stories/icons/story-icon-1.svg" alt="story-icon-1">
-                <a class="stories-list__item-link" href='#'>Если нет диплома <br /> о высшем образовании</a>
+                <a class="stories-list__item-link" href='#'>Если нет диплома <br class="d-none d-md-block"/> о высшем образовании</a>
               </div>
               <div class="stories-list__item">
                 <img src="./assets/stories/icons/story-icon-2.svg" alt="story-icon-2">
@@ -340,16 +429,16 @@
               </div>
               <div class="stories-list__item">
                 <img src="./assets/stories/icons/story-icon-3.svg" alt="story-icon-3">
-                <a class="stories-list__item-link" href='#'>У меня нет бэкграунда <br /> в программировании</a>
+                <a class="stories-list__item-link" href='#'>У меня нет бэкграунда <br class="d-none d-md-block"/> в программировании</a>
               </div>
               <div class="stories-list__item custom-margin">
                 <img src="./assets/stories/icons/story-icon-4.svg" alt="story-icon-4">
-                <a class="stories-list__item-link" href='#'>Программирование <br /> не для девушек</a>
+                <a class="stories-list__item-link" href='#'>Программирование <br class="d-none d-md-block"/> не для девушек</a>
               </div>
             </div>
             <button class="btn">Смотреть все</button>
           </div>
-          <div class="col-md-6">
+          <div class="d-none d-md-block col-md-6">
             <div class="stories-example">
               <img src="./assets/stories/story_1.png" alt="story 1" class="stories-example__background">
               <img src="./assets/stories/story_2.png" alt="story 2" class="stories-example__other-1">
@@ -375,40 +464,40 @@
           </div>
         </div>
         <div class="row work__container">
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/vtb.png" alt="vtb"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/sm.png" alt="sm"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/hcb.png" alt="hcb"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/twino.png" alt="twino"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/epam.png" alt="epam"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/oleg.png" alt="oleg"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/cmx.png" alt="cmx"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/sb.png" alt="sb"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/itc.png" alt="itc"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/lxf.png" alt="lxf"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/rfb.png" alt="rfb"></div>
           </div>
-          <div class="col-md-2">
+          <div class="work__item col-4 col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center">
             <div class="img-wrapper"><img src="./assets/logos/nmn.png" alt="nmn"></div>
           </div>
         </div>
@@ -430,13 +519,13 @@
                   <div class="community-card__title circe">Отзыв Насти и Толи об участии в JAVABOOTCAMP#3</div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 d-none d-md-block">
                 <div class="community-card">
                   <img src="./assets/community/github.png" alt="delete me">
                   <div class="community-card__title circe">Открытый урок <br /> «Работа с GitHub»</div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 d-none d-md-block">
                 <div class="community-card">
                   <img src="./assets/community/code.png" alt="delete me">
                   <div class="community-card__title circe">Статья «Как писать чистый код»</div>
@@ -455,17 +544,18 @@
               <div class="col-md-6">
                 <div class="community-card">
                   <img src="./assets/community/man.png" alt="delete me">
-                  <div class="community-card__title circe">Готовитесь к собеседованию или просто хотите проверить уровень знаний?</div>
+                  <div class="community-card__title circe d-none d-lg-block">Готовитесь к собеседованию или просто хотите проверить уровень знаний?</div>
+                  <div class="community-card__title circe d-lg-none">Готовитесь к собеседованию?</div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 d-none d-md-block">
                 <div class="community-card">
                   <img src="./assets/community/book.png" alt="delete me">
                   <div class="community-card__title circe">Лайвхаки для начинающих <br /> от KATA ACADEMY</div>
                 </div>
               </div>
               <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <a class="arrow-btn">Больше <br /> полезностей</a>
+                <a class="arrow-btn community-link">Больше <br /> полезностей</a>
               </div>
             </div>
           </div>
@@ -475,25 +565,43 @@
     <section class="engage">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-12">
             <h2>Поступить в KATA</h2>
           </div>
         </div>
         <div class="row engage__content align-items-center">
-          <div class="col-md-5">
-            <button class="btn">Начать учиться</button>
+
+          <div class="col-12 order-md-2 col-md-8 col-lg-7 d-flex justify-content-between align-items-center">
+            <div class="engage__extras">
+              <div class="engage__extras-data">
+                <a class="d-block text-nowrap engage__contacts-email" href="mailto:info@java-mentor.com">info@java-mentor.com</a>
+                <a class='d-block text-nowrap engage__contacts-phone text-left' href="tel:+7(800)350-32-96">8 800 350 32 96</a>
+              </div>
+              <div class="engage__extras-links">
+                <a class="d-flex justify-content-start" href='https://www.facebook.com/rujavamentor'><img src="./assets/fb.svg" alt="fb share" /></a>
+                <a class="d-flex justify-content-end" href='https://vk.com/java_mentor'><img src="./assets/vk.svg" alt="vk share" /></a>
+                <a class="d-flex justify-content-start" href='https://www.instagram.com/javamentor'><img src="./assets/inst.svg" alt="inst share" /></a>
+                <a class="d-flex justify-content-end" href='https://t.me/JavaMentor'><img src="./assets/tg.svg" alt="tg share" /></a>
+              </div>
+            </div>
+            <!-- <div class="row engage__extras">
+              <div class="col-9 engage__contacts d-flex flex-column justify-content-between">
+                <a class="engage__contacts-email" href="mailto:info@java-mentor.com">info@java-mentor.com</a>
+                <a class='engage__contacts-phone text-left' href="tel:+7(800)350-32-96">8 800 350 32 96</a>
+              </div>
+              <div class="col-3 share">
+                <div class="row h-100">
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </div> -->
+
           </div>
-          <div class="col-md-7 d-flex justify-content-between align-items-center">
-            <div class="engage__contacts">
-              <a href="mailto:info@java-mentor.com">info@java-mentor.com</a>
-              <a class='phone d-flex align-items-center' href="tel:+7(800)350-32-96">8 800 350 32 96</a>
-            </div>
-            <div class="share">
-              <a class='ml-4' href='https://www.facebook.com/rujavamentor'><img src="./assets/fb.svg" alt="fb share" /></a>
-              <a class='ml-4' href='https://vk.com/java_mentor'><img src="./assets/vk.svg" alt="vk share" /></a>
-              <a class='ml-4' href='https://www.instagram.com/javamentor'><img src="./assets/inst.svg" alt="inst share" /></a>
-              <a class='ml-4' href='https://t.me/JavaMentor'><img src="./assets/tg.svg" alt="tg share" /></a>
-            </div>
+          <div class="engage-btn col-12 order-md-1 col-md-4 col-lg-5">
+            <button class="btn">Начать учиться</button>
           </div>
         </div>
       </div>
@@ -502,8 +610,9 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 footer__border">
-          <nav class="navbar navbar-expand-lg mt-2">
+        <div class="col-md-12">
+          <div class="footer__border"></div>
+          <nav class="navbar navbar-expand-lg mt-2 d-none d-md-none">
             <ul class="navbar-nav mr-auto fz-1_125">
               <li class="nav-item mr-5 "><a class="fw-800 nav-link" href='#'>Об Академии</a></li>
               <li class="nav-item mr-5 "><a class="fw-800 nav-link" href='#'>Истории выпускников</a></li>
@@ -515,12 +624,12 @@
         </div>
       </div>
       <div class="row meta circe">
-        <div class="col-md-10">
-          <a href="#" class="link">© 2020 KATA programming academy</a>
-          <a href="#" class="link">Публичная оферта</a>
-          <a href="#" class="link">Политика конфиденциальности</a>
+        <div class="footer__item col-12 col-md-7">
+          <a class="d-block" href="#" class="link">© 2020 KATA programming academy</a>
+          <a class="d-block" href="#" class="link">Публичная оферта</a>
+          <a class="d-block" href="#" class="link">Политика конфиденциальности</a>
         </div>
-        <div class="col-md-2">
+        <div class="footer__item footer__item--last col-12 col-md-5">
           <a href="https://PIXL.RU">Дизайн сайта PIXL.RU</a>
         </div>
       </div>

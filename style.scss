@@ -6,13 +6,146 @@ $container-max-width: 400px;
 $headerHeight: 150px;
 ///
 $fw_bold: 700;
+@mixin before_sm {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+
+@mixin before_md {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin before_lg {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin before_xl {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+h1 {
+    font-size: 50px;
+    @include before_lg() {
+        font-size: 29px;
+    }
+    @include before_md() {
+        font-size: 20px;
+    }
+    @include before_sm() {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    @include before_lg() {
+        font-size: 22px;
+    }
+    @include before_md() {
+        font-size: 23px;
+    }
+    // @include before_sm() {
+    //     font-size: 28px;
+    //     line-height: 40px;
+    // }
+}
+
+section .description {
+    font-family: "Circe";
+    font-weight: 700;
+    font-size: 24px;
+    color: #D2D3D8;
+    margin-top: 45px;
+    @include before_lg() {
+        font-size: 16px;
+        margin-top: 14px;
+    }
+}
+
+section .description.dark {
+    line-height: 35px;
+    margin-top: 50px;
+    color: black;
+    @include before_lg() {
+        font-size: 16px;
+        margin-top: 14px;
+        line-height: 24px;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 2rem;
+    &:focus {
+        outline: none;
+    }
+}
+
 nav {
     margin-right: -0.5rem;
+    .nav-item {
+        white-space: nowrap;
+    }
+    .main-info {
+        padding-right: 10px;
+    }
+    .navbar-brand {
+        img {
+            width: auto;
+            @include before_sm {
+                width: 165px;
+            }
+            @include before_lg {
+                width: 140px;
+            }
+            @include before_md {
+                width: 120px;
+            }
+        }
+    }
+    .dropdown-toggle[aria-expanded=true] {
+        background-color: #161B1C;
+    }
+    .dropdown-menu {
+        top: calc(100% - 4px);
+        left: -1px;
+        &__content {
+            display: flex;
+        }
+        border-radius: 0;
+        background-color: #161B1C;
+        .dropdown-col--border {
+            border-left: 1px solid #000;
+        }
+        .dropdown-item {
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            &:hover {
+                background-color: transparent;
+                cursor: pointer;
+                color: #8C9EFB;
+            }
+            &__description {
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 .kata-card {
     background-color: white;
     color: black;
+    margin-top: 30px;
     &.dark {
         background-color: #F2F4F4;
         .kata-card__header {
@@ -29,23 +162,70 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 24px;
+        @include before_lg {
+            font-size: 18px;
+        }
+        @include before_md {
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
     &__content {
         padding: 44px 54px;
+        @include before_xl {
+            padding: 38px 46px;
+        }
+        @include before_lg {
+            padding: 32px 18px;
+        }
         .kata-card {
             &__title {
                 display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
                 font-size: 48px;
-                line-height: 4rem;
                 color: transparent;
+                @include before_xl {
+                    font-size: 38px;
+                }
+                @include before_lg {
+                    font-size: 32px;
+                }
+                @include before_md {
+                    font-size: 44px;
+                }
                 .kata-card__name {
                     -webkit-text-stroke: 1px black;
                     font-weight: 900;
                     text-shadow: 3px 3px 0 #8C9EFB;
                     text-transform: uppercase;
                     line-height: 58px;
+                    @include before_xl {
+                        line-height: 40px;
+                    }
+                    @include before_lg {
+                        line-height: 28px;
+                    }
+                    @include before_md {
+                        line-height: 40px;
+                    }
                     &--light {
                         text-shadow: 3px 3px 0 #89E1F3;
+                    }
+                }
+                img {
+                    @include before_xl {
+                        width: 85px;
+                    }
+                    @include before_lg {
+                        width: 55px;
+                    }
+                    @include before_md {
+                        width: 85px;
+                    }
+                    @include before_sm {
+                        display: none;
                     }
                 }
             }
@@ -64,6 +244,12 @@ nav {
                     line-height: 28px;
                     word-spacing: 2.2px;
                     min-height: 84px;
+                    @include before_xl {
+                        min-height: 150px;
+                    }
+                    @include before_md {
+                        min-height: auto;
+                    }
                 }
             }
         }
@@ -88,6 +274,9 @@ nav {
     transform: translate(-27px, -28px);
     line-height: 20px;
     cursor: pointer;
+    @include before_lg {
+        font-size: 14px;
+    }
     &.dark {
         color: black;
     }
@@ -97,21 +286,47 @@ nav {
         top: -80%;
         z-index: -1;
         position: absolute;
-        border-top: 51px solid transparent;
-        border-bottom: 51px solid transparent;
-        border-left: 87px solid #8C9EFB;
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-left: 87px solid #778cf7;
+        @include before_lg {
+            content: '';
+            left: 77%;
+            top: -29%;
+            z-index: -1;
+            position: absolute;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 60px solid #778cf7;
+        }
+    }
+}
+
+header {
+    margin-top: 1.5rem;
+    @include before_sm {
+        margin-top: 0.5rem;
+    }
+    .small-logo {
+        width: 70px;
     }
 }
 
 main {
     margin-top: 1.5rem;
     .main {
+        display: none;
         position: relative;
         &__title {
             position: absolute;
             top: 8rem;
             z-index: 1;
             padding-left: 15px;
+            @include before_xl() {
+                position: static;
+                padding-left: 0;
+                margin-bottom: 30px;
+            }
             h1 {
                 font-weight: 600;
             }
@@ -129,109 +344,249 @@ main {
         }
         &__video {
             width: 660px;
-            margin-right: 20px;
+            @include before_xl() {
+                width: 100%;
+                margin-right: 0;
+            }
             iframe {
                 height: 460px;
                 width: 100%;
+                @include before_sm() {
+                    height: 300px;
+                }
             }
             .main__description {
                 display: flex;
-                margin-top: 2rem;
-                font-size: 1.25rem;
+                margin-top: 30px;
+                font-size: 24px;
                 font-weight: 600;
                 line-height: 2rem;
+                @include before_sm() {
+                    font-size: 18px;
+                    line-height: normal;
+                    padding-right: 5px;
+                }
             }
         }
     }
     .plan {
+        display: none;
         margin-top: 140px;
+        @include before_lg {
+            margin-top: 80px;
+        }
         .plan-steps {
             padding: 28px 34px 22px 32px;
             display: grid;
             grid-gap: 2rem;
+            font-size: 24px;
+            @include before_lg {
+                padding: 22px 28px 16px 24px;
+                font-size: 16px;
+                grid-gap: 1.5rem;
+            }
+            @include before_md {
+                margin-top: 18px;
+            }
             &__row {
                 display: flex;
                 align-items: center;
                 img {
                     min-width: 75px;
                     max-width: 75px;
+                    @include before_lg {
+                        min-width: 60px;
+                        max-width: 60px;
+                    }
                 }
                 label {
                     margin-left: 2.5rem;
                     line-height: 2.25rem;
+                    @include before_lg {
+                        margin-left: 2rem;
+                        line-height: 1.75rem;
+                    }
+                }
+            }
+        }
+        &__description {
+            color: #d2d3d8;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+    }
+    .cup {
+        display: none;
+        margin-top: 120px;
+        @include before_xl {
+            margin-top: 80px;
+        }
+        &__wrapper {
+            display: grid;
+            grid-gap: 66px;
+            grid-template-columns: 15% 1fr 317px;
+            grid-template-areas: "img h2 btn";
+            align-items: center;
+            @include before_xl {
+                grid-template-columns: 15% 1fr;
+                grid-template-areas: "img h2" "btn btn";
+                grid-gap: 56px;
+            }
+            @include before_sm {
+                grid-template-columns: 1fr;
+                grid-template-areas: "img" "h2" "btn";
+                grid-gap: 56px;
+            }
+            @include before_lg {
+                grid-gap: 40px;
+            }
+            @include before_md {
+                grid-gap: 30px;
+            }
+            @include before_sm {
+                grid-gap: 14px;
+            }
+            h2 {
+                grid-area: h2;
+            }
+            img {
+                width: 100%;
+                grid-area: img;
+                @include before_sm {
+                    width: 120px;
+                    margin: 0 auto;
+                }
+            }
+            button {
+                font-size: 1rem;
+                grid-area: btn;
+                @include before_md {
+                    margin-top: 12px;
                 }
             }
         }
     }
-    .cup {
-        margin-top: 120px;
-        &__wrapper {
-            display: grid;
-            grid-gap: 66px;
-            grid-template-columns: 180px 1fr 317px;
-            align-items: center;
-            button {
-                font-size: 1rem;
-            }
+    .program {
+        display: none;
+        margin-top: 100px;
+        @include before_xl {
+            margin-top: 80px;
         }
     }
-    .program {
-        margin-top: 100px;
-    }
     .mentor {
-        margin-top: 110px;
-        padding-top: 108px;
+        display: none;
+        margin-top: 100px;
+        padding-top: 80px;
         padding-bottom: 100px;
         background-color: white;
         color: black;
+        @include before_xl {
+            margin-top: 80px;
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+        @include before_sm {
+            margin-top: 60px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        &__cards {
+            margin-top: 24px;
+            @include before_xl {
+                margin-top: 0px;
+            }
+        }
         h2 {
             color: black;
             padding-right: 35px;
         }
     }
     .bootcamp {
+        display: none;
         background-color: #1A1B2C;
-        padding-top: 103px;
+        padding-top: 100px;
         padding-bottom: 60px;
+        @include before_lg {
+            padding-top: 40px;
+        }
         &-header {
             font-size: 36px;
             font-weight: 900;
             color: #8C9EFB;
             text-transform: uppercase;
+            @include before_md {
+                font-size: 28px;
+            }
         }
         &-description {
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 35px;
-            margin-top: 55px;
             margin-right: 60px;
+            @include before_sm {
+                line-height: 17px;
+            }
         }
         button.btn {
             margin-top: 50px;
             margin-right: 10px;
             padding-left: 70px;
             padding-right: 70px;
+            @include before_lg {
+                margin-top: 0;
+            }
+        }
+        .kata-slider__container {
+            max-height: 275px;
+            overflow: hidden;
+            @include before_xl {
+                max-height: 250px;
+            }
+            @include before_lg {
+                max-height: 400px;
+            }
+            @include before_md {
+                max-height: 350px;
+            }
+            @include before_sm {
+                max-height: 66vw;
+            }
         }
         .kata-slider {
             position: relative;
             margin-top: -35px;
             z-index: 1;
+            height: 100%;
+            @include before_lg {
+                margin-top: 25px;
+            }
             &::after {
                 content: '';
                 position: absolute;
-                top: 22px;
+                top: 46px;
                 z-index: -1;
-                left: 22px;
+                left: 14px;
                 width: 100%;
                 height: 93%;
                 border: 5px solid #8C9EFB;
+                @include before_lg {
+                    border: none
+                }
             }
         }
     }
     .access {
-        margin-top: 107px;
+        display: none;
+        margin-top: 100px;
+        @include before_xl {
+            margin-top: 40px;
+        }
         .description {
             margin-right: 300px;
+            @include before_xl {
+                margin-right: 0px;
+            }
+        }
+        &__container {
+            margin-top: 32px;
         }
         &-card {
             background-color: #161B1C;
@@ -242,24 +597,37 @@ main {
             height: 367px;
             margin-bottom: 30px;
             padding: 24px;
+            @include before_lg {
+                height: 260px;
+                padding: 20px;
+            }
             img {
                 margin-top: 65px;
+                @include before_lg {
+                    width: 80px;
+                    margin: 0 auto;
+                    margin-top: 45px;
+                }
             }
             &__title {
                 font-size: 19px;
                 font-weight: 700;
                 line-height: 23px;
                 min-height: 46px;
+                @include before_lg {
+                    font-size: 14px;
+                }
             }
         }
     }
     .stories {
+        display: none;
         margin-top: 70px;
-        .description {
-            margin-top: 50px;
-        }
         .stories-content {
             margin-top: 120px;
+            @include before_lg {
+                margin-top: 50px;
+            }
         }
         &-list {
             margin-left: 5px;
@@ -267,13 +635,29 @@ main {
                 display: flex;
                 align-items: center;
                 margin-top: 40px;
+                img {
+                    @include before_lg {
+                        width: 30px;
+                    }
+                }
                 &:nth-child(1) {
                     margin-top: 0;
                 }
                 &.custom-margin {
                     margin-top: 65px;
+                    @include before_lg {
+                        margin-top: 45px;
+                    }
+                    img {
+                        @include before_lg {
+                            width: 40px;
+                        }
+                    }
                     .stories-list__item-link {
                         margin-left: 41px;
+                        @include before_lg {
+                            margin-left: 22px;
+                        }
                     }
                 }
                 .stories-list__item-link {
@@ -282,6 +666,14 @@ main {
                     margin-left: 50px;
                     line-height: 27px;
                     text-decoration: underline;
+                    @include before_xl {
+                        margin-left: 40px;
+                        font-size: 20px;
+                    }
+                    @include before_xl {
+                        margin-left: 30px;
+                        font-size: 16px;
+                    }
                     &:hover {
                         opacity: 0.8;
                     }
@@ -293,11 +685,24 @@ main {
             padding-left: 80px;
             padding-right: 80px;
             font-size: 16px;
+            @include before_lg {
+                margin-top: 80px;
+            }
+            @include before_md {
+                width: 100%;
+            }
         }
         .stories-example {
             position: relative;
             color: black;
             height: 625px;
+            @include before_xl {
+                height: 500px;
+            }
+            @include before_lg {
+                height: 367px;
+                margin-top: 20px;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -305,7 +710,7 @@ main {
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0.6);
                 z-index: 5;
             }
             img {
@@ -314,11 +719,18 @@ main {
                 box-shadow: 0px 0px 10px #0000002e;
                 transition: 0.1s;
                 cursor: pointer;
+                width: 100%;
                 &.stories-example__other-1 {
                     transform: translate(-25px, -20px);
                     z-index: 3;
                     &:hover {
                         transform: translate(-30px, -25px);
+                    }
+                    @include before_lg {
+                        transform: translate(-15px, -10px);
+                        &:hover {
+                            transform: translate(-17px, -13px);
+                        }
                     }
                 }
                 &.stories-example__other-2 {
@@ -327,12 +739,24 @@ main {
                     &:hover {
                         transform: translate(-55px, -45px);
                     }
+                    @include before_lg {
+                        transform: translate(-30px, -20px);
+                        &:hover {
+                            transform: translate(-32px, -22px);
+                        }
+                    }
                 }
                 &.stories-example__other-3 {
                     transform: translate(-75px, -60px);
                     z-index: 1;
                     &:hover {
                         transform: translate(-80px, -65px);
+                    }
+                    @include before_lg {
+                        transform: translate(-45px, -30px);
+                        &:hover {
+                            transform: translate(-47px, -32px);
+                        }
                     }
                 }
             }
@@ -341,26 +765,56 @@ main {
                 height: 100%;
                 position: absolute;
                 z-index: 6;
+                @include before_xl {
+                    padding: 40px 60px;
+                }
+                @include before_lg {
+                    padding: 20px 40px;
+                }
                 .stories-example__header {
                     font-size: 30px;
                     font-weight: 700;
                     line-height: 38px;
+                    @include before_xl {
+                        font-size: 24px;
+                    }
+                    @include before_lg {
+                        font-size: 20px;
+                        line-height: 25px;
+                    }
                 }
                 .stories-example__title {
                     margin-top: 28px;
+                    @include before_lg {
+                        margin-top: 12px;
+                        line-height: 18px;
+                    }
                 }
                 .stories-example__name {
                     margin-top: 25px;
+                    @include before_lg {
+                        margin-top: 8px;
+                    }
                 }
                 .stories-example__title,
                 .stories-example__name {
                     font-size: 20px;
                     font-weight: 700;
+                    @include before_xl {
+                        font-size: 18px;
+                    }
+                    @include before_lg {
+                        font-size: 16px;
+                    }
                 }
                 .stories-example__link {
                     position: absolute;
                     bottom: 65px;
                     left: 100px;
+                    @include before_xl {
+                        left: 70px;
+                        bottom: 10px;
+                    }
                     .stories-example__triangle {
                         margin-top: -70px;
                         margin-left: 53px;
@@ -376,15 +830,31 @@ main {
         }
     }
     .work {
-        margin-top: 107px;
+        display: none;
+        margin-top: 100px;
+        @include before_lg {
+            margin-top: 80px;
+        }
         &__container {
             background-color: white;
             margin-left: 0;
             margin-right: 0;
             margin-top: 75px;
             padding: 20px 0;
-            padding-bottom: 50px;
             position: relative;
+            @include before_xl {
+                margin-top: 40px;
+            }
+            @include before_lg {
+                margin-top: 40px;
+            }
+            @include before_sm {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                padding: 0;
+                margin-top: 20px;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -395,18 +865,39 @@ main {
                 background-color: #8C9EFB;
                 z-index: -1;
             }
+            .work__item {
+                padding: 0 6px;
+            }
             .img-wrapper {
-                width: 100%;
-                height: 100%;
+                width: 125px;
+                height: 150px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 32px;
+                @include before_sm {
+                    height: 200px;
+                }
+                img {
+                    @include before_sm {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
     .community {
         margin-top: 120px;
+        @include before_lg {
+            margin-top: 80px;
+        }
+        &-link {
+            @include before_lg {
+                left: 17px;
+            }
+            @include before_md {
+                margin-top: 100px;
+            }
+        }
         &-content {
             .community-card {
                 margin-top: 54px;
@@ -428,26 +919,107 @@ main {
         font-weight: 700;
         h2 {
             color: #8C9EFB;
+            @include before_md {
+                text-align: center;
+            }
         }
         button {
             font-size: 16px;
+            @include before_md {
+                width: 100%;
+            }
+        }
+        &-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        &__extras {
+            width: calc(100% + 30px);
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 6px;
+            margin-right: 6px;
+            @include before_md {
+                margin-top: 26px;
+                font-size: 18px;
+            }
+            @include before_lg {
+                font-size: 20px;
+            }
+            img {
+                width: 20px;
+            }
+            &-data {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include before_md {
+                    height: 90px;
+                    margin-top: -5px;
+                }
+            }
+            &-links {
+                margin-left: 6px;
+                width: 75px;
+                height: 75px;
+                display: flex;
+                width: 215px;
+                justify-content: space-between;
+                @include before_md {
+                    width: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-gap: 35px;
+                }
+                a {
+                    margin-left: 30px;
+                    @include before_md {
+                        margin-left: 0px;
+                    }
+                }
+            }
         }
         &__content {
             margin-top: 70px;
+            @include before_md {
+                margin-top: 30px;
+            }
             button {
                 padding-left: 80px;
                 padding-right: 80px;
+                @include before_lg {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @include before_md {
+                    margin-top: 24px;
+                }
             }
         }
-        img {
-            width: 26px;
+        .share {
+            padding-left: 10px;
+            a {
+                margin-left: 24px;
+                @include before_md {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
 
 footer {
-    margin-top: 75px;
+    margin-top: 45px;
+    @include before_lg {
+        margin-top: 40px;
+    }
     .container {
+        .footer__border {
+            border-top: 3px solid #161B1C;
+        }
         nav {
             border-top: 3px solid #161B1C;
             padding: 0;
@@ -457,12 +1029,34 @@ footer {
             padding-right: 0;
             padding-left: 0;
         }
+        .footer__item {
+            @include before_md {
+                margin-top: 8px;
+            }
+            &--last {
+                display: flex;
+                justify-content: flex-end;
+                @include before_md {
+                    margin-top: 38px;
+                    justify-content: center;
+                }
+            }
+        }
         .meta {
-            margin-top: 88px;
+            margin-top: 20px;
+            @include before_lg {
+                margin-top: 16px;
+            }
             font-size: 16px;
-            font-weight: 700;
+            @include before_md {
+                font-size: 14px;
+            }
             .link {
                 margin-right: 47px;
+                font-weight: 400;
+                @include before_md {
+                    margin-right: 0;
+                }
             }
         }
     }

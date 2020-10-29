@@ -89,6 +89,13 @@ label {
 .bg-blue {
     background-color: #89e1f3;
     color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 2px;
+}
+
+.ml-m-2 {
+    margin-left: -2px;
 }
 
 .color-light-gray {
@@ -121,35 +128,12 @@ h6 {
     padding: 0;
 }
 
-h1 {
-    font-size: 50px;
-}
-
-h2 {
-    font-size: 36px;
-    font-weight: 700;
-}
-
 p {
     margin: 0;
 }
 
 a:hover {
     color: inherit;
-}
-
-section .description {
-    font-family: "Circe";
-    font-weight: 700;
-    font-size: 24px;
-    color: #D2D3D8;
-    margin-top: 45px;
-}
-
-section .description.dark {
-    line-height: 35px;
-    margin-top: 50px;
-    color: black;
 }
 
 .btn {
@@ -195,4 +179,9 @@ body {
     font-family: "Montserrat", sans-serif;
     color: white;
     padding-bottom: 50px;
+    transition: 1s;
+}
+
+.chromeperfectpixel-panel {
+    transform: scale(0.5)!important;
 }
