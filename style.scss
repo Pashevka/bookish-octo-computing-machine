@@ -315,7 +315,6 @@ header {
 main {
     margin-top: 1.5rem;
     .main {
-        display: none;
         position: relative;
         &__title {
             position: absolute;
@@ -370,7 +369,6 @@ main {
         }
     }
     .plan {
-        display: none;
         margin-top: 140px;
         @include before_lg {
             margin-top: 80px;
@@ -417,7 +415,6 @@ main {
         }
     }
     .cup {
-        display: none;
         margin-top: 120px;
         @include before_xl {
             margin-top: 80px;
@@ -468,14 +465,12 @@ main {
         }
     }
     .program {
-        display: none;
         margin-top: 100px;
         @include before_xl {
             margin-top: 80px;
         }
     }
     .mentor {
-        display: none;
         margin-top: 100px;
         padding-top: 80px;
         padding-bottom: 100px;
@@ -503,7 +498,6 @@ main {
         }
     }
     .bootcamp {
-        display: none;
         background-color: #1A1B2C;
         padding-top: 100px;
         padding-bottom: 60px;
@@ -574,7 +568,6 @@ main {
         }
     }
     .access {
-        display: none;
         margin-top: 100px;
         @include before_xl {
             margin-top: 40px;
@@ -621,7 +614,6 @@ main {
         }
     }
     .stories {
-        display: none;
         margin-top: 70px;
         .stories-content {
             margin-top: 120px;
@@ -830,7 +822,6 @@ main {
         }
     }
     .work {
-        display: none;
         margin-top: 100px;
         @include before_lg {
             margin-top: 80px;

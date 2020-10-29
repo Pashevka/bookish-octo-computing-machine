@@ -402,7 +402,6 @@ main {
 }
 
 main .main {
-  display: none;
   position: relative;
 }
 
@@ -479,7 +478,6 @@ main .main__video .main__description {
 }
 
 main .plan {
-  display: none;
   margin-top: 140px;
 }
 
@@ -552,7 +550,6 @@ main .plan__description {
 }
 
 main .cup {
-  display: none;
   margin-top: 120px;
 }
 
@@ -644,7 +641,6 @@ main .cup__wrapper button {
 }
 
 main .program {
-  display: none;
   margin-top: 100px;
 }
 
@@ -655,7 +651,6 @@ main .program {
 }
 
 main .mentor {
-  display: none;
   margin-top: 100px;
   padding-top: 80px;
   padding-bottom: 100px;
@@ -695,7 +690,6 @@ main .mentor h2 {
 }
 
 main .bootcamp {
-  display: none;
   background-color: #1A1B2C;
   padding-top: 100px;
   padding-bottom: 60px;
@@ -803,7 +797,6 @@ main .bootcamp .kata-slider::after {
 }
 
 main .access {
-  display: none;
   margin-top: 100px;
 }
 
@@ -878,7 +871,6 @@ main .access-card__title {
 }
 
 main .stories {
-  display: none;
   margin-top: 70px;
 }
 
@@ -1199,7 +1191,6 @@ main .stories .stories-example__background {
 }
 
 main .work {
-  display: none;
   margin-top: 100px;
 }
 
